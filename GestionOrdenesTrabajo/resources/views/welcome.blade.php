@@ -71,8 +71,10 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <!--<a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('register') }}">Register</a>-->
+                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ route('admin.dashboard') }}">Admin</a>
                     @endauth
                 </div>
             @endif
@@ -82,7 +84,7 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div class="panel">
                             @component('components.who')
-                            @endcomponent   
+                            @endcomponent
                         </div>
                     </div>
                 </div>
