@@ -5,90 +5,45 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Tecno Solutions Corp.</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('inicio-app/popper.min.js') }}" defer></script>
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('inicio-app/cover.css') }}" rel="stylesheet">
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <!--<a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>-->
-                        <a href="{{ route('home') }}">Home</a>
-                        <a href="{{ route('admin.dashboard') }}">Admin</a>
-                    @endauth
-                </div>
-            @endif
+    <body class="text-center bg-dark" >
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand">
+              <a href="{{ url('/') }}"  style="color: white;">
+                  <strong>Tecno Solutions Corp.</strong>
+              </a>
+            </h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="/">Inicio</a>
+              <a class="nav-link" href="/home">Ingresar</a>
+              <a class="nav-link" href="/admin">Admin</a>
+            </nav>
+          </div>
+        </header>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="panel">
-                            @component('components.who')
-                            @endcomponent
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+        <main role="main" class="inner cover">
+          <img class="img-fluid" src="{{ asset('img/logotsc.png') }}">
+          <h2 class="cover-heading">Soluciones Tecnológicas para ti.</h2>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+          <div class="inner">
+            <p>Copyright © 2018 <a target="_blank" href="https://www.tecnosolutionscorp.com/">Tecno Solutions Corp.</a> Todos los derechos reservados.</p>
+          </div>
+        </footer>
+      </div>
+
+  </body>
 </html>

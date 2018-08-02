@@ -1,0 +1,6 @@
+Para solucionar ciertos errores
+puedes ejecutar comandos como:
+
+composer dump-autoload -o
+composer update
+php artisan cache:clear
