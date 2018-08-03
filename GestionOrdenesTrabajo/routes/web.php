@@ -19,7 +19,12 @@ Auth::routes();
 
 //dashboard
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/users/logout','Auth\LoginController@userLogout')->name('user.logout');
+
+Route::prefix('users')->group(function(){
+  Route::post('/logout','Auth\LoginController@userLogout')->name('user.logout');
+  Route::get('/perfil','HomeController@showPerfil')->name('user.perfil');
+});
+
 
 //administrador
 Route::prefix('admin')->group(function(){
@@ -33,4 +38,8 @@ Route::prefix('admin')->group(function(){
   Route::get('/password/reset','Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
   Route::post('/password/reset','Auth\AdminResetPasswordController@reset');
   Route::get('/password/reset/{token}','Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
+
+  //perfil
+  Route::get('/perfil','AdminController@showPerfil')->name('admin.perfil');
+
 });
