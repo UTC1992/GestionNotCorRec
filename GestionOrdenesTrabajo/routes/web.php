@@ -41,5 +41,7 @@ Route::prefix('admin')->group(function(){
 
   //perfil
   Route::get('/perfil','AdminController@showPerfil')->name('admin.perfil');
+  Route::post('/updateperfil','AdminController@updatePerfil')->name('admin.update-perfil');
+  Route::post('/updatepassword','AdminController@updatePassword')->name('admin.update-password');
 
 });

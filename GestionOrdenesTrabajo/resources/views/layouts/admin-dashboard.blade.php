@@ -245,7 +245,7 @@ desired effect
         <div class="pull-left info">
           <p>David</p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> En línea</a>
+          <a href="#" ><i class="fa fa-circle text-success"></i> En línea</a>
         </div>
       </div>
 
